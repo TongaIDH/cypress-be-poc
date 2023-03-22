@@ -4,6 +4,8 @@ describe("Testing status codes", () => {
   });
 
   it("Should have failed status code", () => {
-    cy.request({url: "employees/5", failOnStatusCode: false}).its("status").should("eq", 404);
+    cy.request({ url: "employees/5", failOnStatusCode: false })
+      .its("status")
+      .should("eq", 404);
   });
 });
